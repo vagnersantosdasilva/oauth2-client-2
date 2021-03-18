@@ -1,0 +1,12 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          custom:
+            client-id: 1b4492af-a158-4cd8-b08e-a3fbec68011b
+            client-secret: f4b854ef-8eed-4361-aefc-e28279cb12ec
+            authorization-grant-type: client_credentials
+        provider:
+          custom:
+            token-uri: http://localhost:8081/oauth/token
