@@ -1,4 +1,4 @@
-package com.vss.oauth2client2;
+package com.vss.oauth2client2.model;
 
 public class Resource {
 

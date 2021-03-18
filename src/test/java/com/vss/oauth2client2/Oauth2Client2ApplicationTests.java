@@ -1,5 +1,7 @@
 package com.vss.oauth2client2;
 
+import com.vss.oauth2client2.model.Resource;
+import com.vss.oauth2client2.service.ClientService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +17,9 @@ class Oauth2Client2ApplicationTests {
 
     @Autowired
     WebClient webClient2;
+
+    @Autowired
+    ClientService clientService;
 
     @Test
     void testConfiguracaoWebClientDeprecated() {
@@ -44,6 +49,13 @@ class Oauth2Client2ApplicationTests {
 
         System.out.println(resource.getName());
 
+    }
+
+    @Test
+    void testServiceClientResource(){
+        Integer id =2;
+        Resource r = clientService.getResource(id);
+        System.out.println(r.getName());
     }
 
 
